@@ -8,7 +8,6 @@ on:
 
 jobs:
   Win_jorb:
-    if: github.ref != 'dxgi_interop'
     runs-on: windows-latest
     strategy:
       matrix:
@@ -43,6 +42,7 @@ jobs:
         path: source\build\${{ matrix.build_config }}\HelloTriangle.exe
 
   linux_jorb:
+    if: github.ref != 'dxgi_interop'
     runs-on: ubuntu-latest
     strategy:
       matrix:
