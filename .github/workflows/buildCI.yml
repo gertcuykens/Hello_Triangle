@@ -54,6 +54,7 @@ jobs:
       VULKAN_SDK: ${{ github.workspace }}/VulkanSDK/x86_64
 
     steps:
+    - run: echo Branch ${{ github.ref }}
     - uses: actions/checkout@v2
       with:
         repository: 'krOoze/vk_sdk_lite'
